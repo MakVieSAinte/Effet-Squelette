@@ -1,0 +1,67 @@
+ *,::before,::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+   height: 100vh;
+   font-family: Arial, Helvetica, sans-serif;
+   background: linear-gradient(to right, #434343, #212121);
+ }
+
+ .cards-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   grid-gap: 20px;
+   padding: 0 20px;
+   max-width: 1300px;
+   margin: 50px auto 0;
+ }
+
+ .card {
+   background-color: #f1f1f1;
+ }
+
+ .top-img {
+   display: block;
+   height: 200px;
+   width: 100%;
+   background-color: #4c4c4c;
+   object-fit: cover;
+ }
+
+ .top-img.skeleton-anim {
+   animation: skeleton 0.8s ease-in-out infinite alternate;
+ }
+
+ @keyframes skeleton {
+   to {
+      opacity: 0.7;
+   }
+ }
+
+ .content {
+   padding: 15px;
+ }
+
+ .skeleton-title,
+ .skeleton-text {
+   background-color: #4c4c4c;
+   animation: skeleton 0.8s ease-in-out infinite alternate;
+   width: 60%;
+ }
+
+ .skeleton-title {
+   height: 22px;
+ }
+ .skeleton-text {
+   margin-top: 10px;
+   height: 12px;
+ }
+
+ .skeleton-text:first-of-type {
+   width: 90%;
+ }
+
+ /* 925DEV */
